@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="happy-birthday-lofi-version-222774.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="card" id="birthday-card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="Screenshot 2024-08-31 at 1.14.58 PM.png" alt="Birthday Image">
+        </div>
+        <div class="details">
+            <h4 class="color1">Birthday Card</h4>
+            <h4 class="color2 margin">(HAPPY BIRTHDAY)</h4>
+            <p>Dear Manya,</p>
+
+            <p>You are the light that brightens my world,</p>
+            <p>the spark that sets my heart on fire.</p>
+            <p>Your love guides me through every moment,</p>
+            <p>making life beautiful and meaningful.</p>
+            <p>On your special day, I just want to say,</p>
+            <p>I'm endlessly grateful to have you by my side.</p>
+            <p>Happy birthday to the love of my life!</p>
+            
+            <p class="text-right">Happy Birthday, Manya!</p>
+            <p class="text-right">♥Chirag</p>
+        </div>
+    </div>
+
+    <script>
+        const card = document.getElementById('birthday-card');
+        const audio = document.getElementById('background-music');
+
+        // Play audio when hovering over the card
+        card.addEventListener('mouseover', () => {
+            audio.play().catch(error => {
+                console.error('Error trying to play audio:', error);
+            });
+        });
+
+        // Pause audio when not hovering over the card
+        card.addEventListener('mouseout', () => {
+            audio.pause();
+        });
+    </script>
+</body>
+</html>
